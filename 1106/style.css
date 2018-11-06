@@ -7,14 +7,17 @@
 
 body{
     background-color:#313654;
+    
 }
 
 
-.ryan { 
+.ryan {
     position: relative; 
     margin: 50px auto; /* 상하 50px 여백을 주고 좌우는 중앙 정렬 */ 
     width: 400px; /* 라이언 가로 폭 */ 
-    height: 380px; /* 라이언 세로 폭 */ }
+    height: 580px; /* 라이언 세로 폭 */ 
+     
+}
 
 /* 라이언 얼굴 */
 .ryan .face { 
@@ -27,7 +30,7 @@ body{
 /* 귀 공통 스타일 */
 .ryan .ear { 
     position: absolute; 
-    top: 0; 
+    bottom: 300px;
     width: 92px; 
     height: 92px; 
     border: 10px solid #000; 
