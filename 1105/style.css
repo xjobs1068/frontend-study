@@ -1,0 +1,138 @@
+
+/* *은 전체 선택자 입니다. */ 
+*, *:after, *:before 
+{ /* padding이나 border-width로 인해 전체 사이즈에 영향을 받지 않도록 선언해 줍니다. */ 
+    box-sizing: border-box; 
+}
+
+body{
+    background-color:#313654;
+}
+
+
+.ryan { 
+    position: relative; 
+    margin: 50px auto; /* 상하 50px 여백을 주고 좌우는 중앙 정렬 */ 
+    width: 400px; /* 라이언 가로 폭 */ 
+    height: 380px; /* 라이언 세로 폭 */ }
+
+/* 라이언 얼굴 */
+.ryan .face { 
+    position: absolute; 
+    bottom: 0; 
+    width: 400px; height: 367px; border-radius: 100%; /* 원형으로 만들기 */ 
+    border: 10px solid #000; 
+    background: #d59729;  }
+
+/* 귀 공통 스타일 */
+.ryan .ear { 
+    position: absolute; 
+    top: 0; 
+    width: 92px; 
+    height: 92px; 
+    border: 10px solid #000; 
+    border-radius: 100%; 
+    background: #d59729; }
+
+/* 왼쪽 귀 위치 */
+.ryan .ear.left{
+    left: 54px;
+}    
+
+/* 오른쪽 귀 위치 */ 
+.ryan .ear.right { 
+    right: 54px; 
+}
+
+/* 눈썹 */
+.ryan .eyebrow{
+    position: absolute;
+    top: 106px;
+    width: 78px;
+    height: 20px;
+    border-radius: 14px;
+    background: black;
+    transition: all 0.2s; /*속성 변화시 0.2초에 걸려 부드럽게 변함*/
+}
+
+.ryan .eyebrow.left{
+    left:68px;
+}
+
+.ryan .eyebrow.right{
+    right:68px;
+}
+
+/* 눈 */
+
+.ryan .eye{
+    position: absolute;
+    top: 147px;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    background-color: #000;
+    transition: all 0.2s;
+}
+
+.ryan .eye.left{
+    left: 98px;
+}
+
+.ryan .eye.right{
+    right: 98px;
+}
+
+.ryan .nose{
+    position:absolute;
+    top:184px;
+    left: 50%;
+    margin-left:-16px; 
+    width: 32px;
+    height: 33px;
+    border-radius: 80% 80% 100% 100%;
+    background-color: #000;
+    z-index: 2; /*z-index로 입보다 코가 위로 올라간다 */
+    
+}
+
+.ryan .mouth{
+    position: absolute;
+    top: 191px;
+    right: 73px;
+    width: 73px;
+    height: 68px;
+    border-radius: 50%;
+    border: 10px solid #000;
+    background-color: white;
+
+}
+
+.ryan .mouth.left{
+    left: 127px;
+}
+
+.ryan .mouth.right{
+    right: 127px;
+}
+
+.ryan .mouth:before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 33px;
+    background-color:#fff;
+    -webkit-transform: rotate(-45deg); /* webkit은 크롬, 사파리 */
+    transform: rotate(-45deg);
+    z-index:1;
+}
+
+.ryan .mouth.left:before{
+    top: 2px;
+    left: 29px;
+}
+
+.ryan .mouth.right:before{
+    top: 2px;
+    right: 31px;
+}
