@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<HEAD>
+    <TITLE>1day</TITLE>
+</HEAD>
+
+<style tyle="text/css">
+    html,
+    body,
+    li,
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        width: 100%;
+        height: 900px;
+        position: relative;
+    }
+
+    .left,
+    .right,
+    .left_left {
+        position: absolute;
+        display: flex;
+        align-items: center;
+    }
+
+    .left {
+        background-color: #FCF9E2;
+        width: 50%;
+        left: 0;
+        top: 0;
+    }
+
+    .right {
+        background-color: #D7E4FF;
+        width: 50%;
+        right: 0;
+        top: 0;
+
+    }
+
+    .text {
+        position: absolute;
+        z-index: 999;
+        display: block;
+        text-align: center;
+        margin-top: 36px;
+    }
+
+    .text span {
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    span {
+        background: linear-gradient(to right, #fbcac9, #8ca6ce);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #fbcac9;
+    }
+
+    .right_box {
+        width: 532px;
+        height: 490px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        margin: auto;
+    }
+
+    .right_box h1 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-left: 24px;
+        margin-top: 27px;
+    }
+
+    .right_box li {
+        margin-top: 36px;
+        font-size: 16px;
+        line-height: 19px;
+        margin-right: 24px;
+    }
+
+    .squ {
+        width: 200px;
+        height: 200px;
+        background: #43BBFF;
+        margin: auto;
+    }
+
+    .cir {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        border: 1px solid #000000;
+    }
+
+    .cir_top {
+        background: red;
+        left: 25%;
+        top: -25%;
+    }
+
+    .cir_bottom {
+        background: blue;
+        left: 25%;
+        top: 75%;
+    }
+
+    .cir_right {
+        background: yellow;
+        left: -25%;
+        top: 25%;
+    }
+
+    .cir_left {
+        background: green;
+        left: 75%;
+        top: 25%;
+    }
+
+    .scir {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #000000;
+    }
+
+    .scir_top {
+        background: red;
+        left: 25%;
+        top: -25%;
+    }
+
+    .scir_bottom {
+        background: grey;
+        left: 25%;
+        top: 75%;
+    }
+
+    .scir_right {
+        background: green;
+        left: 75%;
+        top: 25%;
+    }
+
+
+    .scir_left {
+        background: yellow;
+        left: -25%;
+        top: 25%;
+    }
+</style>
+
+<body>
+    <div>
+        <div class="text">
+            <span>Use Postion</span>
+        </div>
+        <div class="left">
+            <div class="left_left">
+                <div class="squ">
+                    <div class="cir cir_top">
+                        <div class="scir scir_top">T</div>
+                        <div class="scir scir_right">R</div>
+                        <div class="scir scir_left">L</div>
+                        <div class="scir scir_bottom">B</div>
+                    </div>
+
+                    <div class="cir cir_bottom">
+                        <div class="scir scir_top">T</div>
+                        <div class="scir scir_right">R</div>
+                        <div class="scir scir_left">L</div>
+                        <div class="scir scir_bottom">B</div>
+                    </div>
+
+                    <div class="cir cir_right">
+                        <div class="scir scir_top">T</div>
+                        <div class="scir scir_right">R</div>
+                        <div class="scir scir_left">L</div>
+                        <div class="scir scir_bottom">B</div>
+                    </div>
+
+                    <div class="cir cir_left">
+                        <div class="scir scir_top">T</div>
+                        <div class="scir scir_right">R</div>
+                        <div class="scir scir_left">L</div>
+                        <div class="scir scir_bottom">B</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="right_box">
+                <h1>과제안내</h1>
+                <ol>
+                    <li>디자인에 제시된 모든 부분을 구현한다<b>(‘과제 안내’ 부분 포함)</b></li>
+                    <li>모든 디자인은 figma를 통해 제공된다</li>
+                    <li><b>3/24(수)까지 완성</b>해야하며, 과제 구현에 관한 질문은 <b>일체</b> 받지 않는다.</li>
+                    <li>수업에서 언급되지 않은 부분이 과제에 포함될 수 있으며,<br><b>구글링을 통해 직접 알아보는 것 또한 과제의 일부</b>이다.</li>
+                    <li>이번 과제는 반응형 웹 형태를 요구하지 않으며,<br>현재 프레임의 크기인 <b>1440x900</b> 기준으로 평가한다.</li>
+                    <li>폰트, 색상 등의 <b>디자인적 요소는 자유롭게 변경 가능</b>하다.<br>단, 제시된 도형 간의 비율은 유지해야한다.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</HTML>
