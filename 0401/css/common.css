@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    border: 1px solid;
+    display: inline-block;
+    padding: 20px 120px;
+    margin-top: 76px;
+    border: 10px solid #000000;
+  }
+
+  span {
+    font-size: 18px;
+    margin-right: 20px;
+    color: #777;
+  }
+
+  span:hover {
+    font-weight: 600;
+    color: black;
+  }
+
+  span.active {
+    font-weight: 600;
+    color: black;
+  }
+
+  img {
+    width: 1060px;
+    height: 708px;
+    margin-bottom: 40px;
+    margin: auto;
+    display: block;
+  }
