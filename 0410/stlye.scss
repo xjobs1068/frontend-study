@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+.wrapper{
+    background-image: url(https://i.imgur.com/sphnqX6.jpg);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+}
+
+button{
+    display: block;
+    margin: auto;
+    border: none;
+    width: 160px;
+    height: 56px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: rgb(13, 114, 255);
+    color: white;
+
+    transition: transform .2s ease-out 0s;
+
+    &:hover{
+        background-color: rgb(9, 65, 144);
+
+        /*translateY(n)	요소의 위치를 Y축으로 y만큼 이동시킨다.	*/
+        transform: translateY(-5px);
+    }
+}

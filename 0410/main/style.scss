@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin text-color($color) {
+    color: $color;    
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #F0F2F5;
+}
+
+.container {
+    margin-top: 20px;
+    box-shadow: rgba($color: #000000, $alpha:0.06) 0px 0px 41px 0px;
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px 16px;
+}
+
+.main-text {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 8px;
+    line-height: 20px;
+}
+
+.textbox {
+    padding: 16px;
+}
+
+.more {
+    margin-top: 12px;
+    background-color: #222;
+    @include text-color(white);
+    text-decoration: none;
+    border-radius: 2px;
+    width: 80px;
+    height: 26px;
+    line-height: 28px;
+    display: block;
+    text-align: center;
+    transition: transform .2s ease-out 0s;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+}

@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #F0F2F5;
+}
+
+.container {
+  margin-top: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 41px 0px;
+          box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 41px 0px;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px 16px;
+}
+
+.main-text {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 14px;
+  text-align: justify;
+  margin-top: 8px;
+  line-height: 20px;
+}
+
+.textbox {
+  padding: 16px;
+}
+
+.more {
+  margin-top: 12px;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 2px;
+  width: 80px;
+  height: 26px;
+  line-height: 28px;
+  display: block;
+  text-align: center;
+  -webkit-transition: -webkit-transform .2s ease-out 0s;
+  transition: -webkit-transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s, -webkit-transform .2s ease-out 0s;
+}
+
+.more:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+/*# sourceMappingURL=style.css.map */
