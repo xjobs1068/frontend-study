@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin text-color($color) {
+    color: $color;    
+}
+
+html,body, .wrapper{
+    height: 100%;
+}
+
+header{
+    height: 60px;
+    padding:16px;
+    box-sizing: border-box;
+}
+
+#logo{
+    font-size: 28px;
+    font-weight: bolder;
+    @include text-color(white);
+    text-decoration: none;
+
+}
+
+body{
+    background-image: url("http://thaizer.smugmug.com/Thailand/Chiang-Mai/i-C33QKpS/0/L/MaeJoMassLanternReleaseChiangMai-35-L.jpg");
+    background-size: cover;
+    @include text-color(white);
+}
+
+.main-text{
+    font-size: 40px;
+}
+
+.sub-text{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.btn{
+    margin-top: 50px;
+    @include text-color(white);
+    font-size: 18px;
+    border: none;
+    padding: 8px 40px;
+    border: 1px solid white;
+    background-color: rgba($color: #000000, $alpha: 0.0);
+}
+
+main{
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    height: calc(100% - 60px);
+    align-items: center;
+    justify-content: center;
+}
