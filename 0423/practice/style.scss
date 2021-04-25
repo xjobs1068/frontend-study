@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    height: 800px;
+    background-color: gray;
+    text-align: center;
+
+    background-image: url("https://cdn-images-1.medium.com/max/2600/1*Ihd8eEM7cUZ4jXpMYSL2xQ.jpeg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.info {
+    display: inline-block;
+    width: 800px;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.info h3 {
+    font-size: 16px;
+    margin-bottom: 32px;
+    color: rgb(50, 145, 220);
+}
+
+.info h2 {
+    font-size: 64px;
+    margin-bottom: 64px;
+    color: white;
+    font-family: serif;
+}
+
+.helper {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+
+}
+
+a {
+    border: 2px solid white;
+    width: 200px;
+    height: 60px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    line-height: 60px;
+}
