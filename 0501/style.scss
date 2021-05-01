@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 1120px;
+    max-width: none !important;
+    margin: 0 auto;
+}
+
+.page-text {
+    text-align: center;
+}
+
+h2.page-title {
+    font-size: 42px;
+    padding: 30px 0 30px;
+}
+
+p.page-info {
+    font-size: 22px;
+    color: #333;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+}
+
+.contentbox{
+    margin-top: 0;
+    padding: 20px 0 35px;
+    border-bottom: 1px solid #efefef;
+}
+
+.contentbox:last-child{
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.content-cotainer {
+    margin: 54px auto 120px;
+}
+
+.content-title {
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: -.2px;
+    margin: 34px 0 20px;
+
+    b {
+        display: block;
+        color: #00b843;
+    }
+
+}
+
+span.blind {
+    float: left;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 6px 28px 0 0;
+
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80px;
+        height: 80px;
+        margin: -40px 0 0 -40px;
+        border-radius: 4px;
+    }
+}
+
+.naver span.blind::before{
+    background: url(https://i.imgur.com/6kJZViF.jpg);
+}
+
+.series span.blind::before{
+    background: url(https://i.imgur.com/dyqux0R.jpg);
+}
+
+.band span.blind::before{
+    background: url(https://i.imgur.com/cpJAFyi.jpg);
+}
+
+p.info_text {
+    margin: 0 0 25px;
+    font-size: 15px;
+    color: #606167;
+    line-height: 1.8;
+    letter-spacing: -.1px;
+}
+
+.carousel .slides .slideItem {
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.content-left {
+    width: calc(100% - 400px);
+    padding: 0 39px 0 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content-right {
+    padding: 20px 10px;
+    display: inline-block;
+    position: relative;
+}
+
+img.main-image {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    z-index: -1;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    display: inline-block;
+}
+
+i {
+    font-size: 24px;
+    margin-right: 32px;
+    color: #333333;
+
+    &:hover{
+        color:#34C759;
+    }
+}
