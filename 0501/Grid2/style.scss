@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin main-content {
+    position: absolute;
+    top: 0;
+    padding: 12px;
+    font-size: 40px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    height: 100%;
+    transition: all .3s ease-in-out;
+}
+
+$h100:100px;
+
+
+html,
+body {
+    max-width: none !important;
+    height: 100%;
+}
+
+body {
+    background: black;
+}
+
+header {
+    height: $h100;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.11);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main {
+    padding: 60px 0 60px 0;
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    min-height: 100%;
+
+}
+
+article {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 300px;
+
+}
+
+.photo-box-content {
+    background-color: black;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+
+.photo-img {
+    @include main-content();
+    opacity: 0;
+    &:hover {
+        opacity: 1;
+        color: black;
+    }
+}
+
+.photo-text {
+    @include main-content();
+    background: black;
+    color: white;
+
+    &:hover {
+        opacity: 0;
+    }
+}
+
+footer {
+    height: $h100;
+    background: white;
+    color: black;
+    line-height: $h100;
+    text-align: center;
+}

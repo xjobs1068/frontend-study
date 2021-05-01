@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+Header {
+  height: 200px;
+  background: orange;
+}
+
+main {
+  width: 70%;
+  height: 600px;
+  background: blue;
+  float: left;
+}
+
+aside {
+  height: 400px;
+}
+
+.siderbar {
+  background: yellowgreen;
+}
+
+.siderbar2 {
+  width: 15%;
+  background: green;
+  float: right;
+}
+
+footer {
+  background: red;
+  height: 200px;
+  clear: both;
+}
+/*# sourceMappingURL=style.css.map */

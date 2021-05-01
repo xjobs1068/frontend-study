@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin w($w) {
+    width: $w;
+}
+
+@mixin h($h) {
+    height:$h;
+}
+
+@mixin bgc($bgc) {
+    background:$bgc;
+}
+
+@mixin fl($fl) {
+    float: $fl;
+}           
+
+@mixin cl($cl) {
+    clear: $cl;
+}
+
+Header{
+    @include h(200px);
+    @include bgc(orange);
+}
+
+main{
+    @include w(70%);
+    @include h(600px);
+    @include bgc(blue);
+    @include fl(left);
+}
+
+aside{
+    @include h(400px); 
+}
+
+.siderbar{
+    @include bgc(yellowgreen);
+}
+
+.siderbar2{
+    @include w(15%);
+    @include bgc(green);
+    @include fl(right);
+}
+
+footer{
+    @include bgc(red);
+    @include h(200px);
+    @include cl(both);
+}

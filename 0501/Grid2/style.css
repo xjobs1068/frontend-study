@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: none !important;
+  height: 100%;
+}
+
+body {
+  background: black;
+}
+
+header {
+  height: 100px;
+  background: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.11);
+}
+
+.header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+main {
+  padding: 60px 0 60px 0;
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+article {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+
+.photo-box-content {
+  background-color: black;
+  color: white;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.photo-img {
+  position: absolute;
+  top: 0;
+  padding: 12px;
+  font-size: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+  height: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+
+.photo-img:hover {
+  opacity: 1;
+  color: black;
+}
+
+.photo-text {
+  position: absolute;
+  top: 0;
+  padding: 12px;
+  font-size: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+  height: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: black;
+  color: white;
+}
+
+.photo-text:hover {
+  opacity: 0;
+}
+
+footer {
+  height: 100px;
+  background: white;
+  color: black;
+  line-height: 100px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
