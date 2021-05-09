@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  min-width: 992px;
+  font-family: "Helvetica";
+}
+
+header {
+  padding: 0 30px;
+  height: 60px;
+  line-height: 60px;
+}
+
+header .logo {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+header img {
+  height: 20px;
+}
+
+header .nav-list {
+  float: right;
+}
+
+header .nav-list li {
+  float: left;
+  font-size: 13px;
+  font-weight: bolder;
+  padding: 0 15px;
+}
+
+main {
+  max-width: 994px;
+  margin: auto;
+}
+
+main .item-title {
+  text-align: center;
+  font-size: 24px;
+  color: #545454;
+  font-weight: bolder;
+  margin: 60px 0px;
+}
+
+main .item-grid {
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 735px;
+}
+
+main .item-list {
+  display: inline-block;
+}
+
+main .item-prd {
+  width: 225px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+main .item-prd a {
+  color: #545454;
+}
+
+main .item-prd img {
+  width: 225px;
+}
+
+main .item-prd p {
+  text-align: center;
+}
+
+main .item-prd .prd-name {
+  margin-top: 20px;
+}
+
+main .item-prd .prd-price {
+  margin-top: 4px;
+}
+
+footer {
+  margin-top: 120px;
+  padding-bottom: 80px;
+}
+
+footer .sns-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0px 20px;
+}
+
+footer .sns-icon a.footer-icon img {
+  height: 32px;
+}
+/*# sourceMappingURL=style.css.map */
