@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+   
+div#navbar {
+  height: 80px;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+div#navbar a img{
+  height: 20px;
+}
+
+ul#menu{
+  float: right;
+}
+
+li {
+  list-style: none;
+  float: left;
+  display: block;
+  padding: 0 20px;
+}
+
+li:hover{
+  background: #DCDCDC;
+}
+
+li a{
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+}
+
+.hero-header{
+ height: 500px;
+ background-image: url("https://www.navercorp.com/img/ko/value/img_flower.jpg");
+ background-size: cover;
+ background-position: center center;
+}
