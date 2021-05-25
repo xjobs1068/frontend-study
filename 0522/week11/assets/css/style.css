@@ -1,0 +1,206 @@
+.logo {
+  font-weight: bolder;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../images/menu.png") !important;
+}
+
+.carousel-item {
+  height: 680px;
+  background-color: grey;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center center;
+}
+
+.carousel-item h1 {
+  font-weight: bolder;
+}
+
+.carousel-item a {
+  width: 160px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 20px;
+  background-color: royalblue;
+  color: white;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-transition: -webkit-transform .2s ease-out 0s;
+  transition: -webkit-transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s, -webkit-transform .2s ease-out 0s;
+}
+
+.carousel-item a:hover {
+  text-decoration: none;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.carousel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.alert {
+  margin-top: 50px;
+  margin-bottom: 16px;
+  background-color: #007bff;
+  color: white;
+}
+
+.course {
+  display: block;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  -webkit-transition: -webkit-transform .2s ease-out 0s;
+  transition: -webkit-transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s;
+  transition: transform .2s ease-out 0s, -webkit-transform .2s ease-out 0s;
+}
+
+.course:hover {
+  text-decoration: none;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.course .info {
+  padding: 10px;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+
+.course h4 {
+  font-size: 18px;
+  display: inline-block;
+}
+
+.course .name {
+  font-size: 13px;
+}
+
+footer {
+  margin-top: 120px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-top: 1px solid #e1e4e6;
+}
+
+.dark-btn {
+  position: absolute;
+  right: 2%;
+  bottom: 20px;
+  z-index: 9999;
+  position: fixed;
+}
+
+.dark-btn-color {
+  border: none;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  width: 120px;
+  padding: 8px 0;
+  border-radius: 40px;
+  font-weight: bolder;
+}
+
+.dark-btn-color:focus {
+  border: none;
+  outline: none;
+}
+
+.dark-btn-color:hover {
+  background-color: #404040;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    background-color: #1e1f21;
+    color: #969696;
+  }
+  .dark-mode nav {
+    background-color: #1e1f21 !important;
+  }
+  .dark-mode nav .logo:hover {
+    color: #fff;
+  }
+  .dark-mode nav .navbar-brand {
+    color: #fff;
+  }
+  .dark-mode nav .nav-link {
+    color: #969696 !important;
+  }
+  .dark-mode nav .nav-link:hover {
+    color: #fff  !important;
+  }
+  .dark-mode .alert {
+    background-color: #2c2d30;
+    border-color: #3a3b3d;
+  }
+  .dark-mode .course {
+    background-color: #292A2D;
+  }
+  .dark-mode .course h4 {
+    color: white;
+  }
+  .dark-mode .course .name {
+    color: #979DA3;
+  }
+  .dark-mode footer {
+    background-color: #292a2d;
+    border-color: #3a3b3d;
+  }
+  .dark-mode .dark-btn {
+    background-color: #3a3b3d;
+    color: #979DA3;
+  }
+  .dark-mode .dark-btn:hover {
+    background-color: #fff;
+    color: #222;
+  }
+  .dark-mode .navbar-toggler {
+    border-color: #9F9F9F !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

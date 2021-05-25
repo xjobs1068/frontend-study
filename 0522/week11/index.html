@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>ShareSkill</title>
+  <meta charset="utf-8">
+
+  <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+  <button class="dark-btn dark-btn-color" onclick="darkMode()" id="button">다크모드</button>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand logo" href="">WEEKEND</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">강의</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">커뮤니티</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">회원가입
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">로그인</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/banner1.jpg" alt="">
+        <div class="carousel-caption carousel-title">
+          <h1>배우고 싶은 것을 배워봐요</h1>
+          <p>모든지 다 알려줄게요</p>
+          <a class="carousel-link" href="">강사찾기</a>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/images/banner2.jpg" alt="">
+        <div class="carousel-caption carousel-title">
+          <h1>설레는 신규 강의가 도착했어요</h1>
+          <p>나에게 필요한 강의는 없는지 찾아봐요!</p>
+          <a class="carousel-link" href="">강좌찾기</a>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/images/banner3.jpg" alt="">
+        <div class="carousel-caption carousel-title">
+          <h1>공부하다 막히면 커뮤니티에 물어보세요!</h1>
+          <p>#개발지식은 #위캔드_커뮤니티</p>
+          <a class="carousel-link" href="">커뮤니티 바로가기!</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="alert alert-waring alert-dismissible fade show" role="alert">
+            <Strong>4개 신규강좌 개설!</Strong>지금 당장 수강하러 가보세요!
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>  
+          </div>
+        </div>
+
+
+      <div class="row">
+
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="" class="course">
+            <img class="course-images" src="assets/images/course1.jpg" alt="" srcset="" width="100%">
+          <div class="info">
+            <h4>잼민이도 한다! 파이썬플라스크</h4>
+            <div class="lecturer">
+              <img src="assets/images/user.png" alt="" srcset="" width="20px" height="20px">
+              <span class="name">김잼민</span>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="" class="course">
+            <img class="course-images" src="assets/images/course2.jpg" alt="" srcset="" width="100%">
+          <div class="info">
+            <h4>할머니도 지향하는 클린코드</h4>
+            <div class="lecturer">
+              <img src="assets/images/user.png" alt="" srcset="" width="20px" height="20px">
+              <span class="name">이근</span>
+            </div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="" class="course">
+            <img class="course-images" src="assets/images/course3.jpg" alt="" srcset="" width="100%">
+          <div class="info">
+            <h4>개도하는 GO로 암호화폐 만들기</h4>
+            <div class="lecturer">
+              <img src="assets/images/user.png" alt="" srcset="" width="20px" height="20px">
+              <span class="name">Doggie</span>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="" class="course">
+            <img class="course-images" src="assets/images/course4.jpg" alt="" srcset="" width="100%">
+          <div class="info">
+            <h4>노션(notion) 완벽 활용법</h4>
+            <div class="lecturer">
+              <img src="assets/images/user.png" alt="" srcset="" width="20px" height="20px">
+              <span class="name">김노션</span>
+            </div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="" class="course">
+            <img class="course-images" src="assets/images/course5.jpg" alt="" srcset="" width="100%">
+          <div class="info">
+            <h4>인지심리디자인</h4>
+            <div class="lecturer">
+              <img src="assets/images/user.png" alt="" srcset="" width="20px" height="20px">
+              <span class="name">앨론쿠퍼</span>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="" class="course">
+            <img class="course-images" src="assets/images/course6.jpg" alt="" srcset="" width="100%">
+          <div class="info">
+            <h4>모두를 위한 깃 & 깃허브</h4>
+            <div class="lecturer">
+              <img src="assets/images/user.png" alt="" srcset="" width="20px" height="20px">
+              <span class="name">오토캡</span>
+            </div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="" class="course">
+            <img class="course-images" src="assets/images/course7.jpg" alt="" srcset="" width="100%">
+          <div class="info">
+            <h4>머신러닝테크닉</h4>
+            <div class="lecturer">
+              <img src="assets/images/user.png" alt="" srcset="" width="20px" height="20px">
+              <span class="name">한석원</span>
+            </div>
+          </div>
+        </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+          <a href="" class="course">
+            <img class="course-images" src="assets/images/course8.jpg" alt="" srcset="" width="100%">
+          <div class="info">
+            <h4>코인으로 퇴사합니다.</h4>
+            <div class="lecturer">
+              <img src="assets/images/user.png" alt="" srcset="" width="20px" height="20px">
+              <span class="name">홍길동</span>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <footer class="container-fluid navbar-fixed-bottom">
+      <p>ⓒ WEEKEND Corp.</p>
+    </footer>    
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/bundle.js"></script>
+
+</body>
+
+</html>

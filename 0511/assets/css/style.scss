@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mobile-text {
+    display: none;
+}
+
+.firtst-section {
+    background-color: #e3f8fa;
+}
+
+.padding,
+.footer-info {
+    max-width: 1120px;
+    margin: auto;
+}
+
+.qr-box {
+    text-align: center;
+    padding-top: 160px;
+    margin-bottom: 80px;
+
+    img.qr-code {
+        position: relative;
+        left: 170px;
+    }
+
+    img.go-ico {
+        position: relative;
+        top: -60px;
+        left: 177px;
+    }
+}
+
+.pc-01 {
+    display: flex;
+    justify-content: center;
+}
+
+.pc-01-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 80px;
+
+    li {
+        float: left;
+        text-align: left;
+
+        h1 {
+            color: #26c6da;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        p {
+            padding-left: 30px;
+            font-size: 25px;
+            letter-spacing: -2px;
+            line-height: 40px;
+        }
+    }
+}
+
+footer {
+    background: #222;
+    height: 500px;
+
+    .footer-info {
+        padding-top: 160px;
+        text-align: center;
+
+        p {
+            margin-top: 20px;
+            font-size: 25px;
+            line-height: 40px;
+            color: #ffffff;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .padding {
+        padding: 0 16px;
+    }
+
+    .qr-box {
+        display: none;
+    }
+
+    .pc-01 {
+        flex-direction: column;
+
+        .mobile-text {
+            margin: auto;
+            display: block;
+            margin-top: 40px;
+            margin-bottom: 24px;
+        }
+
+        img {
+            max-width: 100%;
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+
+    }
+
+    .pc-01-text {
+        flex-direction: column;
+
+        li {
+            float: none;
+            text-align: center;
+
+            h1 {
+                color: #26c6da;
+                font-weight: bolder;
+                font-size: 24px;
+            }
+
+            p {
+                margin-top: 12px;
+                padding-left: 0;
+                font-size: 14px;
+                letter-spacing: 0px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    footer {
+
+        .footer-info {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+
+}
