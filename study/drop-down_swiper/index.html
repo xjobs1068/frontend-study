@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .select-box {
+            position: relative;
+        }
+
+        .select-option {
+            position: absolute;
+            display: none;
+        }
+
+        .selected {
+            display: block;
+        }
+
+        .display{
+            display: none;
+            position: absolute;
+            top: 32px;
+        }
+
+        .display.active{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="display">
+        <div data-select="1">1</div>
+        <div data-select="2">2</div>
+        <div data-select="3">3</div>
+    </div>
+        <div class="click-box">
+            <div class="select-box">
+                <div class="select-option selected" data-select="1">1</div>
+                <div class="select-option" data-select="2">2</div>
+                <div class="select-option" data-select="3">3</div>
+            </div>
+        </div>
+
+        <script>
+            //hasClass <-현재 이 class가 있는지 없는지 확인하는 것
+            //addClass <-Class를 추가해주는 것 
+            //removeClass <-Class를 제거하는 것 
+            //toggleClass <-addClass+RemoveClass 
+            //[] <- [attribute]
+
+            // $(".click-box").on("click",function(){
+            //     if($(".display").hasClass("active")){
+            //         $(".display").removeClass("active");
+            //     } else {
+            //         $(".display").addClass("active");
+            //     }
+            // });
+
+            $(".click-box").on("click",function(){
+                $(".display").toggleClass("active");
+            });
+
+            $(".display > div").on("click",function(){
+                $('.select-option').removeClass('selected')
+                $('.select-option[data-select='+this.dataset.select+']').toggleClass('selected')
+                $('.select-option[data-select='+this.dataset.select+']')
+            });
+
+
+        </script>
+</body>
+</html>

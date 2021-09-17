@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .post {
+            display: grid;
+            grid-template-columns: 10% 20% 50% 20%;
+            text-align: center;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .prototype{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="prototype">
+        <div class="post">
+            <div class="number">1</div>
+            <div class="title">한화 시즌 첫승</div>
+            <div class="description">63빌딩이 무너졌다.</div>
+            <div class="date">21-09-12</div>
+        </div>
+    </div>
+
+    <div class="post-contaier">
+
+    </div>
+
+    <script>
+        for(let i=1; i<=10; i++){
+            let newpost = $('.prototype .post').clone();
+            newpost.find('.number').text(i)
+            newpost.find('.date').text(getDate())
+            $('.post-contaier').append(newpost);
+        }
+
+        function getDate(){
+            let now = new Date();
+            let year = now.getFullYear();
+            let month = now.getMonth()+1;
+            let date = now.getDate();
+            return year+'-'+month+'-'+date;
+        }
+    </script>
+</body>
+
+</html>

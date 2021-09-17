@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>alert</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .alert {
+            /* display: none; */
+            justify-content: center;
+            align-items: center;
+            margin: 4px;
+        }
+
+        .alert-info {
+            background: white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            font-size: 18px;
+            padding: 20px 40px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .delete-btn {
+            border: 0;
+            background: none;
+        }
+
+        .prototype {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="prototype">
+        <div class="alert">
+            <div class="alert-info">
+                엘리트입니다.
+                <button class="delete-btn">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert-contaier"></div>
+    <button class="alert-btn">클릭</button>
+    <script>
+        $(".alert-btn").on("click", function () {
+            let newAlert = $('.prototype .alert').clone(); //깊은 복사 새로운 변수에다가 넣음
+            $('.alert-contaier').append(newAlert); //요소 안쪽에 맨 뒤
+            // $('body').insertAfter(newAlert); //요소뒤에다가 넣겠다
+            // $('body').insertbefore(newAlert); //요소앞에다가 넣겠다
+            // $('.alert').show(); //display:none을 해제시켜줌 hide는 none처리
+        });
+
+        $(document).on("click", '.delete-btn', function(){
+        $(this).closest('.alert').remove(); //가장가까운 부모요소를 찾아감
+        });
+    </script>
+</body>
+
+</html>

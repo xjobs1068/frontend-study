@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .modal{
+            position: fixed;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: rgba(100, 100, 111, 0.8);
+        }
+        .modal-info {
+            width: 200px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: white;
+            border-radius: 6px;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal-info">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum.
+            </p>
+        </div>
+    </div>
+    <button class="modal-btn">모달버튼</button>
+    <script>
+        $(".modal-btn").on("click",function(){
+            $('.modal').css({
+                'display':'flex',
+                'font-weight':'bolder'
+            });
+        });
+
+        $('.modal-info').on("click", function(){
+            //1번 솔루션
+            $('.modal').css('display','none');
+            // $('.modal').hide();
+        });
+    </script>
+</body>
+
+</html>

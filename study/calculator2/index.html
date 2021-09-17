@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Document</title>
+
+    <style>
+        .calculator {
+            display: flex;
+            flex-flow: column;
+            width: 300px;
+        }
+
+        .displayContainer {
+            line-height: 30px;
+            text-align: right;
+            border: 1px solid #444;
+            height: 30px;
+            padding: 4px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .buttonContainer {
+            display: flex;
+            width: 100%;
+            flex-flow: column;
+        }
+
+        .buttonLine {
+            display: flex;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .button {
+            text-align: center;
+            background-color: rgb(187, 187, 187);
+            width: 100%;
+            padding: 4px;
+            margin: 4px;
+            border-radius: 4px;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .sign {
+            background: green;
+        }
+
+        .button.sign[data-num='='] {
+            background: greenyellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="displayContainer">
+            <div class="formula"></div>
+        </div>
+        <div class="buttonContainer">
+            <div class="buttonLine">
+                <div class="button number" data-num="7">7</div>
+                <!--data-num num이라는 이름에 data-->
+                <div class="button number" data-num="8">8</div>
+                <div class="button number" data-num="9">9</div>
+                <div class="button sign" data-num="/">/</div>
+            </div>
+            <div class="buttonLine">
+                <div class="button number" data-num="4">4</div>
+                <div class="button number" data-num="5">5</div>
+                <div class="button number" data-num="6">6</div>
+                <div class="button sign" data-num="*">*</div>
+            </div>
+            <div class="buttonLine">
+                <div class="button number" data-num="1">1</div>
+                <div class="button number" data-num="2">2</div>
+                <div class="button number" data-num="3">3</div>
+                <div class="button sign" data-num="-">-</div>
+            </div>
+            <div class="buttonLine">
+                <div class="button number" data-num="0">0</div>
+                <div class="button number" data-num=".">.</div>
+                <div class="button sign" data-num="=">=</div>
+                <div class="button sign" data-num="+">+</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.button').on("click", function () {
+            let temp = $('.formula').text();
+            let num = $(this).data("num");
+            if (num == "=") {
+                $('.formula').text(getResult(temp));
+                return false;
+            }
+            temp = temp + num;
+            $('.formula').text(temp);
+        });
+
+        $(document).on("keydown", function(event) {
+            let temp = $('.formula').text();
+            let num = event.keyCode - 48;
+            if (event.keyCode == '27') {
+                $('.formula').text("");
+            } else if(event.keyCode >='48' && event.keyCode < '58'){
+                $('.formula').text(temp + num);
+            };
+        });
+
+        function getResult(f) {
+            // stack : 스택으로 사용할 배열(리스트)를 선언
+            let stack = [];
+            // convert : 후위표기식으로 변환된 결과를 저장할 배열(리스트)
+            let convert = [];
+            // temp : 두자릿수 이상의 숫자를 저장할 임시 변수
+            let temp = "";
+
+            // prec : 연산자와 괄호의 우선순위를 반환하는 함수
+            function prec(op) {
+                switch (op) {
+                    case '(':
+                    case ')':
+                        return 0;
+                    case '+':
+                    case '-':
+                        return 1;
+                    case '*':
+                    case '/':
+                        return 2;
+                }
+                return 999;
+            }
+            // f에 공백이 있다면 모두 제거
+            f = f.replace(/(\s*)/g, "");
+
+            for (let i = 0; i < f.length; i++) {
+                const char = f.charAt(i);
+                switch (char) {
+                    case '(':
+                        stack.push(char);
+                        break;
+
+                    case '+':
+                    case '-':
+                    case '*':
+                    case '/':
+                        // 스택이 비어있지 않는경우 현재의 연산자와 top의 우선순위를 비교
+                        while (stack[stack.length - 1] != null &&
+                            (prec(char) <= prec(stack[stack.length - 1]))) {
+                            // 현재 연산자의 우선순위가 낮거나 같으면 temp에 pop한 값을 저장
+                            temp += stack.pop();
+                            // 다음에 연산자가 나오는 경우 temp를 convert에 push 해 줌.
+                            if (isNaN(stack[stack.length - 1])) {
+                                convert.push(temp);
+                                temp = ""
+                            }
+                        }
+                        stack.push(char);
+                        break;
+
+                    case ')':
+                        let returned_op = stack.pop();
+                        while (returned_op != '(') {
+                            temp += returned_op;
+                            returned_op = stack.pop();
+
+                            if (isNaN(stack[stack.length - 1])) {
+                                convert.push(temp);
+                                temp = ""
+                            }
+                        }
+                        break;
+
+                    default:
+                        temp += char;
+                        if (isNaN(f.charAt(i + 1)) || (i + 1 == f.length)) {
+                            convert.push(temp);
+                            temp = ""
+                        }
+                        break;
+                }
+            }
+
+            while (stack.length != 0) {
+                convert.push(stack.pop());
+            }
+
+            for (let i in convert) {
+                // 숫자인 경우 스택에 푸쉬해준다.
+                if (!isNaN(convert[i])) {
+                    stack.push(convert[i]);
+                }
+                // 숫자가 아닌(연산자인) 경우 스택에서 두 값을 pop한다.
+                // 그리고 계산 결과를 다시 stack에 push한다.
+                else {
+                    const b = parseFloat(stack.pop());
+                    const a = parseFloat(stack.pop());
+                    switch (convert[i]) {
+                        case '+':
+                            stack.push(a + b);
+                            break;
+                        case '-':
+                            stack.push(a - b);
+                            break;
+                        case '*':
+                            stack.push(a * b);
+                            break;
+                        case '/':
+                            stack.push(a / b);
+                            break;
+                    }
+                }
+            }
+            return stack;
+        }
+    </script>
+</body>
+
+</html>

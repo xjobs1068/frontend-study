@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .modal {
+            position: fixed;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: rgba(100, 100, 111, 0.8);
+        }
+
+        .modal-info {
+            width: 200px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: white;
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        .post {
+            display: grid;
+            grid-template-columns: 10% 20% 50% 20%;
+            text-align: center;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .prototype {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal-info">
+            <p>
+
+            </p>
+        </div>
+    </div>
+
+    <div class="prototype">
+        <div class="post">
+            <div class="number">1</div>
+            <div class="title">한화 시즌 첫승</div>
+            <div class="description">63빌딩이 무너졌다.</div>
+            <div class="date">21-09-12</div>
+        </div>
+    </div>
+
+    <div class="post-contaier">
+
+    </div>
+
+    <script>
+        $(document).on("keydown", function(event){
+            if(event.keyCode == '27'){
+                $('.modal').css('display', 'none');
+            }
+        });
+
+        $(document).ready(function () {
+            $('.modal').on("click", function () {
+                $('.modal').css('display', 'none');
+            });
+
+            $('.modal-info').on('click', function () {
+                return false;
+            });
+
+            $(".post").on("click", function () {
+                $('.modal').css({
+                    'display': 'flex',
+                    'font-weight': 'bolder',
+                    'text-align':'center'
+                });
+                //description 에 접근해서 63빌딩은 무너졌냐 가져오기
+                let description = $(this).find('.description').text();
+                let number = $(this).find('.number').text();
+                $('.modal-info').text(number+'번 '+description);
+            });
+        });
+        
+        for (let i = 1; i <= 10; i++) {
+            let newpost = $('.prototype .post').clone(); //clone 은 깊은 복사
+            newpost.find('.number').text(i)
+            newpost.find('.date').text(getDate())
+            $('.post-contaier').append(newpost); //append 부모 요소 맨끝에 자식요소 추가
+        }
+
+        function getDate() {
+            let now = new Date();
+            let year = now.getFullYear();
+            let month = now.getMonth() + 1;
+            let date = now.getDate();
+            return year + '-' + month + '-' + date;
+        }
+    </script>
+</body>
+
+</html>

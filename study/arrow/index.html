@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function add(a,b){
+        //     return a+b;
+        // }
+
+        // let add2 = (a, b) => a+b;
+
+        let add3 = (a, b) => {
+            let a3 = a * 3;
+            let b2 = b * 2;
+            return a3 + b2;
+        }
+
+        let add4 = (a, b) => {
+            return a * 3 + b * 2;
+        }
+
+        detect(prompt('숫자는?'));
+
+        function detect(a) {
+            if (!$.isNumeric(a)){ //isNumeric <- 숫자 혹은 텍스트 구별
+                alert("텍스트다!");
+                return '텍스트다!';
+            }
+
+            if (a > 0) {
+                alert("양수다");
+                return '양수';
+            } else if (a == 0) {
+                alert("영이다");
+                return '영';
+            } else {
+                alert("음수다");
+                return '음수';
+            }
+        }
+    </script>
+</body>
+
+</html>

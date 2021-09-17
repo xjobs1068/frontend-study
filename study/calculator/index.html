@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = Number(prompt('a 입력해'));
+        let b = Number(prompt('b 입력해'));
+        let type = prompt('연산자 입력해');
+        alert(calculator(a,b,type));
+
+        function calculator(a, b, type) {
+
+            if (!$.isNumeric(a)) {
+                return false;
+            }
+
+            if (!$.isNumeric(b)) {
+                return false;
+            }
+
+            if ($.isNumeric(type)) {
+                return false;
+            }
+
+            if (type == '+') {
+                return a + b;
+            } else if (type == '-') {
+                return a - b;
+            } else if (type == '*') {
+                return a * b;
+            } else if (type == '/'){
+                return a / b;
+            } else{
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
