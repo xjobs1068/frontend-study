@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>shop</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="#"><img class="logo" src="https://i.imgur.com/9Ek4n3q.png" alt="" srcset=""></a>
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+            <ul class="gnb-menu off">
+                <li class="gnb-menu-list"><a href="javascript:void(0)">아울렛</a></li>
+                <li class="gnb-menu-list"><a href="javascript:void(0)">명품지식</a></li>
+                <li class="gnb-menu-list"><a href="javascript:void(0)">전국매장</a></li>
+                <li class="gnb-menu-list"><a href="javascript:void(0)">TOP브랜드</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        $('.menu-btn').on("click", function(){
+            $('.gnb-menu').toggleClass('off')
+            if($('.gnb-menu').hasClass('off')){
+                $('.gnb-menu').animate({'right':'-100%'}, 500);
+            }else{
+                $('.gnb-menu').animate({'right':'0'}, 500);
+            }
+        });
+
+
+        // $('.menu-btn').on("click", function(){
+        //     $('.gnb-menu').toggle("600");
+        // });
+    </script>
+</body>
+
+</html>

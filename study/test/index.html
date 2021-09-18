@@ -63,15 +63,27 @@
     </div>
 
     <script>
+        function fadeModal(){
+            $('.modal').css('display', 'none');
+        }
+
+        function showModal(){
+            $('.modal').css({
+                    'display': 'flex',
+                    'font-weight': 'bolder',
+                    'text-align':'center'
+                });
+        }
+
         $(document).on("keydown", function(event){
             if(event.keyCode == '27'){
-                $('.modal').css('display', 'none');
+                fadeModal();
             }
         });
 
         $(document).ready(function () {
             $('.modal').on("click", function () {
-                $('.modal').css('display', 'none');
+                fadeModal();
             });
 
             $('.modal-info').on('click', function () {
@@ -79,11 +91,7 @@
             });
 
             $(".post").on("click", function () {
-                $('.modal').css({
-                    'display': 'flex',
-                    'font-weight': 'bolder',
-                    'text-align':'center'
-                });
+                showModal();
                 //description 에 접근해서 63빌딩은 무너졌냐 가져오기
                 let description = $(this).find('.description').text();
                 let number = $(this).find('.number').text();

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>TRAVEL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            letter-spacing: 0.3em;
+            font-weight: bold;
+            border: 1px solid;
+            display: inline-block;
+            padding: 20px 120px;
+            margin-top: 76px;
+            border: 10px solid #000000;
+        }
+
+        span {
+            font-size: 18px;
+            margin-right: 20px;
+            color: #777;
+        }
+
+        span:hover {
+            font-weight: 600;
+            color: black;
+        }
+
+        span.active {
+            font-weight: 600;
+            color: black;
+        }
+
+        img {
+            width: 1060px;
+            height: 708px;
+            margin-bottom: 40px;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div style="text-align: center">
+            <h1>TRAVEL</h1>
+        </div>
+
+        <div class="nat" style="margin: 52px 0; text-align: center">
+            <span class="nat_text active" data-rel="0">HOME</span>
+            <span class="nat_text" data-rel="1">Seoul</span>
+            <span class="nat_text" data-rel="2">Tokyo</span>
+            <span class="nat_text" data-rel="3">Paris</span>
+        </div>
+
+        <div style="margin-bottom: 40px">
+            <img id="myImage" src="https://i.imgur.com/t3Geo3i.png" alt="" />
+        </div>
+    </div>
+
+    <script>
+        var imageArr = ["https://i.imgur.com/t3Geo3i.png", "https://i.imgur.com/1w7zx1q.png",
+            "https://i.imgur.com/wSKWXE4.png", "https://i.imgur.com/xleP5qM.png"
+        ];
+
+        $('.nat_text').on("click", function () {
+            $('.nat_text').removeClass("active")
+            $(this).addClass("active")
+            let rel = $(this).data("rel");
+            $('#myImage').attr("src", imageArr[rel]);
+        });
+    </script>
+</body>
+
+</html>
+
